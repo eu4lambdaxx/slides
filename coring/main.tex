@@ -1,0 +1,100 @@
+\documentclass{beamer}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+}
+\usepackage{amsmath}
+
+
+% formatting (normal mode)
+\newcommand{\idea}[1]{\textbf{\textcolor{blue}{#1}}}
+
+\title{Coring Rules}
+\subtitle{v1.30.3}
+\author{$\lambda x. x$}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Disclaimer}
+  This document is meant to still be useful standalone, so I am not following good slide guidelines and instead being overly verbose. That being said, a corresponding video with live examples is available on my \href{https://www.youtube.com/watch?v=dQw4w9WgXcQ}{youtube channel}.
+\end{frame}
+
+\begin{frame}
+  \frametitle{The tl;dr}
+  \begin{itemize}
+    \item Land connection \textbf{control} from \textbf{controlled} capital
+    \item Adjacent to (owned/unowned) core
+    \item Same continent next to vassal owned core
+    \item Coastal from \textbf{owned} and \textbf{controlled} coastal core (based on colonial range)
+    \item Land connection \textbf{ownership} from \textbf{owned} and \textbf{controlled} coastal core (based on colonial range)
+    \item Colonial nation (CN) spaghetti
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Owner vs Control}
+  \begin{itemize}
+    \item Owner merely requires owning the province.
+    \item Control requires either ownership without occupation (so for example, during peace), or occupation of non-owned (enemy) territory.
+    \item The two are not mutually exclusive.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Capital Rule}
+  \begin{itemize}
+    \item ``You can core any province that is connected to your capital through \textbf{control}''
+    \item Your capital cannot be occupied.
+    \item Occupations do count since it's control!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Generic Core Rule}
+  \begin{itemize}
+    \item ``You can core any province that is next to your core''
+    \item Whether the core is controlled/owned is irrelevant.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Vassal Rule}
+  \begin{itemize}
+    \item ``You can core any same-continent province that is adjacent to an \textbf{owned} subject core''
+    \item All subjects count\footnote{I have not verified if CNs count. They have special rules.}.
+    \item The continent of your vassal is irrelevant.
+    \item The continent of the \textbf{owned} subject core is also irrelevant.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\textbf{Owned} and \textbf{Controlled} Coastal Cores} 
+  \begin{itemize}
+    \item ``All coastal cores exert a distance based coring range both via sea and by land.``
+    \item Note that here the coastal core has to be \textbf{owned} and \textbf{controlled}.
+    \item The easiest way to see the land based coring range is to integrate Dai Viet and annex Ming as a far-away nation, say Ottomans.
+    \item Land based coring range requires land connection via \textbf{ownership}, so occupations neither help nor hurt you.
+    \item Yes, colonial range helps the land coring range as well. In particular, raising dip tech does allow you to core all of Ming with Dai Viet cores.
+    \item Since incomplete colonies count as uncored, they do not exert coastal colonial range.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Colonial Spaghetti}
+  \begin{itemize}
+    \item Having a CN unlocks more coring options. This is not fully investigated/known, so I'm open to any corrections!
+    \item ``A \textbf{controlled} coastal province within colonial range of your CN work as if capital.''
+    \item In particular, this means that if you have a Brazilian CN with sufficient range, you can core inland west african provinces with just an occupation snake.
+  \end{itemize}
+\end{frame}
+
+\end{document}
+
